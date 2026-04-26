@@ -214,6 +214,8 @@ mlx_qwen3_converted/
 /models/
 local_model_qwen3/
 .env.qwen3-mlx
+.env.*
+!.env.example
 *.DS_Store
 .DS_Store
 
@@ -228,4 +230,5 @@ backup_*/
 production/data/
 *.json
 *.log
-*.pid
+*.pid1
+.idea/
