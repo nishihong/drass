@@ -51,7 +51,7 @@ services:
       - REDIS_URL=redis://redis:6379
       
       # Security
-      - SECRET_KEY=your-secret-key-change-in-production
+      - SECRET_KEY=${SECRET_KEY:?SECRET_KEY is required}
       - JWT_ALGORITHM=HS256
       
       # Features
@@ -252,7 +252,7 @@ services:
       - CHROMA_SERVER_AUTH_PROVIDER=chromadb.auth.token_authn.TokenAuthenticationServerProvider
       - CHROMA_SERVER_AUTH_CREDENTIALS_PROVIDER=chromadb.auth.token_authn.TokenConfigServerCredentialsProvider
       - CHROMA_SERVER_AUTH_TOKEN_TRANSPORT_HEADER=AUTHORIZATION
-      - CHROMA_SERVER_AUTH_CREDENTIALS=test-token
+      - CHROMA_SERVER_AUTH_CREDENTIALS=${CHROMA_AUTH_TOKEN:?CHROMA_AUTH_TOKEN is required}
       - PERSIST_DIRECTORY=/chroma/chroma
       - IS_PERSISTENT=TRUE
     volumes:
