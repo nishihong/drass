@@ -11,7 +11,7 @@ import { theme } from './theme';
 import { WebSocketProvider } from './contexts/WebSocketContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { NotificationProvider } from './contexts/NotificationContext';
-import AppRoutes from './routes';
+import AppRoutes from './routes/index';
 import Layout from './layouts/MainLayout';
 
 // Create a query client instance
